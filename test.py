@@ -30,7 +30,7 @@ class TestClass:
 
         with pytest.raises(KeyError) as excinfo:
             response = noRegistrado.pagar(primer_usuario.numero, 50)
-        #If passes the with scope, means that works correctly
+        #If passes the with scope, means that works correctly. Otherwise gives pytest failure.
         assert 1 == 1
 
     def test_pagar_monto_invalido(self):
@@ -59,5 +59,5 @@ class TestClass:
 
         with pytest.raises(KeyError) as excinfo:
             response = noRegistrado.historial()
-        #If passes the with scope, means that works correctly
+        #If passes the with scope, means that works correctly. Otherwise gives pytest failure
         assert 1 == 1
